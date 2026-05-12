@@ -1,58 +1,40 @@
-import { Facebook, Instagram, Music2 } from "lucide-react";
-import Image from "next/image";
-import { gallery } from "@/data/products";
-
-const footerGroups = [
-  {
-    title: "Shop",
-    links: ["All Jewelry", "Rings", "Necklaces", "Order Tracking"],
-  },
-  {
-    title: "Policies",
-    links: ["Terms of Service", "Privacy Policy", "Shipping Policy", "Returns"],
-  },
-  {
-    title: "Company",
-    links: ["Our Story", "Contact Us", "Journal"],
-  },
-];
+import Link from "next/link";
 
 export function Footer() {
   return (
     <footer className="footer">
-      <div className="gallery-strip" aria-label="Itele style gallery">
-        {gallery.map((item) => (
-          <div className="gallery-image" key={item}>
-            <Image src={item} alt="" fill sizes="25vw" />
-          </div>
-        ))}
-      </div>
       <div className="footer-grid">
-        {footerGroups.map((group) => (
-          <div key={group.title}>
-            <h3>{group.title}</h3>
-            {group.links.map((link) => (
-              <a href="#" key={link}>
-                {link}
-              </a>
-            ))}
-          </div>
-        ))}
-        <div className="socials">
-          <h3>Connect with us</h3>
-          <div className="social-icons">
-            <a href="#" aria-label="Instagram">
-              <Instagram size={20} strokeWidth={1.7} />
-            </a>
-            <a href="#" aria-label="TikTok">
-              <Music2 size={20} strokeWidth={1.7} />
-            </a>
-            <a href="#" aria-label="Facebook">
-              <Facebook size={20} strokeWidth={1.7} />
-            </a>
-          </div>
+        <div>
+          <h3>Shop</h3>
+          <Link href="/collections">All Jewelry</Link>
+          <Link href="/collections">Necklaces</Link>
+          <Link href="/collections">Rings</Link>
+          <Link href="/collections">Earrings</Link>
+        </div>
+
+        <div>
+          <h3>Policies</h3>
+          <Link href="/">Terms of Service</Link>
+          <Link href="/">Privacy Policy</Link>
+          <Link href="/">Shipping Policy</Link>
+          <Link href="/">Returns</Link>
+        </div>
+
+        <div>
+          <h3>Company</h3>
+          <Link href="/">Our Story</Link>
+          <Link href="/">Contact Us</Link>
+          <Link href="/">Journal</Link>
+        </div>
+
+        <div>
+          <h3>Connect</h3>
+          <Link href="/">Instagram</Link>
+          <Link href="/">TikTok</Link>
+          <Link href="/">Email</Link>
         </div>
       </div>
+
       <div className="footer-base">
         <span>© 2026 Itele</span>
         <strong>ITELE</strong>

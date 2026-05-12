@@ -1,40 +1,27 @@
-import { Heart, Menu, Search, ShoppingBag, UserRound } from "lucide-react";
-
-const navItems = ["Shop", "Collections", "Our Story", "Contact"];
+import Link from "next/link";
 
 export function Header() {
   return (
     <header className="site-header">
       <div className="shipping-bar">
-        Complimentary insured shipping on all fine jewelry orders
+        Complimentary delivery on select fine jewelry orders
       </div>
+
       <div className="nav-shell">
-        <a className="brand" href="#" aria-label="Itele home">
+        <Link href="/" className="brand" aria-label="Itele home">
           ITELE
-        </a>
+        </Link>
+
         <nav className="desktop-nav" aria-label="Primary navigation">
-          {navItems.map((item) => (
-            <a href="#" key={item}>
-              {item}
-            </a>
-          ))}
+          <Link href="/collections">Shop</Link>
+          <Link href="/collections">Collections</Link>
+          <Link href="/">Our Story</Link>
+          <Link href="/">Contact</Link>
         </nav>
-        <div className="nav-actions">
-          <button aria-label="Search">
-            <Search size={18} strokeWidth={1.8} />
-          </button>
-          <button aria-label="Account">
-            <UserRound size={18} strokeWidth={1.8} />
-          </button>
-          <button aria-label="Wishlist">
-            <Heart size={18} strokeWidth={1.8} />
-          </button>
-          <button aria-label="Shopping bag">
-            <ShoppingBag size={18} strokeWidth={1.8} />
-          </button>
-          <button className="mobile-menu" aria-label="Open menu">
-            <Menu size={20} strokeWidth={1.8} />
-          </button>
+
+        <div className="nav-actions" aria-label="Store actions">
+          <Link href="/collections">Search</Link>
+          <Link href="/collections">Bag</Link>
         </div>
       </div>
     </header>

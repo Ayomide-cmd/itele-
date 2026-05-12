@@ -1,26 +1,25 @@
-import { Heart } from "lucide-react";
 import Image from "next/image";
-import type { Product } from "@/data/products";
+import Link from "next/link";
+import type { Product } from "../data/products";
 
 export function ProductCard({ product }: { product: Product }) {
   return (
     <article className="product-card">
-      <div className="product-image-wrap">
-        <button aria-label={`Save ${product.name}`} className="heart-button">
-          <Heart size={17} strokeWidth={1.8} />
-        </button>
+      <Link href={`/collections/${product.slug}`} className="product-image-wrap">
         <Image
           src={product.image}
           alt={product.name}
           fill
-          sizes="(max-width: 760px) 100vw, 31vw"
+          sizes="(max-width: 900px) 100vw, 33vw"
           className="product-image"
         />
-      </div>
-      <div className="product-meta">
+      </Link>
+
+      <Link href={`/collections/${product.slug}`} className="product-meta">
         <span>{product.name}</span>
         <span>{product.price}</span>
-      </div>
+      </Link>
+
       <p>{product.category}</p>
     </article>
   );

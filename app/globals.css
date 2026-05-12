@@ -221,7 +221,9 @@ button {
 }
 
 .product-image-wrap {
+  display: block;
   position: relative;
+  width: 100%;
   aspect-ratio: 0.72;
   overflow: hidden;
   background: var(--mist);
