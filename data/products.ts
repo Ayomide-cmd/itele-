@@ -3,32 +3,50 @@ export type Product = {
   price: string;
   category: string;
   image: string;
+  sourceFile?: string;
+  images?: string[];
 };
 
 export const products: Product[] = [
   {
-    name: "Adera Diamond Ear Cuffs",
-    price: "$1,280.00",
-    category: "Earrings",
-    image: "/assets/adera-ear-cuffs.png",
-  },
-  {
     name: "Maris Pearl Choker",
-    price: "$2,450.00",
+    price: "₦382,450.00",
     category: "Necklaces",
-    image: "/assets/maris-pearl-choker.png",
+    image:
+      "https://i.pinimg.com/736x/48/6c/51/486c514e5eb8a5d24ba3a9ac45f77cbc.jpg",
   },
   {
-    name: "Selah Ruby Signet",
-    price: "$1,980.00",
+    name: "0.4ct Halo Round Natural Diamond Earrings",
+    price: "₦1,650,000.00",
+    category: "Earrings",
+    image:
+      "https://i.pinimg.com/1200x/f4/93/69/f49369aff8345ba7e2c6b9e1d86f5c66.jpg",
+  },
+  {
+    name: "18 Karat Aeda Elongated Oval Fully Moissanite Engagement Ring",
+    price: "₦3,350,000.00",
     category: "Rings",
-    image: "/assets/selah-ruby-signet.png",
+    image:
+      "https://i.pinimg.com/1200x/52/b5/b7/52b5b744b5231549ab3fafa4398b5604.jpg",
+  },
+  {
+    name: "Garnet Heart Tennis Bracelet - 18k Gold Set With Swiss Rubies",
+    price: "₦2,600,000.00",
+    category: "Bracelets",
+    image:
+      "https://i.pinimg.com/736x/b8/79/e5/b879e5f55be853669ac917efe4760154.jpg",
+  },
+  {
+    name: "Bloom - Imitation Ivory Earrings",
+    price: "₦800,000.00",
+    category: "Earrings",
+    image:
+      "https://i.pinimg.com/1200x/70/1a/c6/701ac6b58f961e9f4a662405f0a7844b.jpg",
+    images: [
+      "https://i.pinimg.com/1200x/70/1a/c6/701ac6b58f961e9f4a662405f0a7844b.jpg",
+      "https://i.pinimg.com/736x/52/1d/dd/521ddd2d2951a3fece8a0a402f580d18.jpg",
+    ],
   },
 ];
 
-export const gallery = [
-  "/assets/gallery-necklace.png",
-  "/assets/gallery-ring.png",
-  "/assets/gallery-earrings.png",
-  "/assets/gallery-bracelet.png",
-];
+export const gallery = products.map((product) => product.image);
