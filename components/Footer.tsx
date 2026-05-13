@@ -15,7 +15,6 @@ export function Footer() {
         <div>
           <h3>Policies</h3>
           <Link href="/">Terms of Service</Link>
-          <Link href="/">Privacy Policy</Link>
           <Link href="/">Shipping Policy</Link>
           <Link href="/">Returns</Link>
         </div>
