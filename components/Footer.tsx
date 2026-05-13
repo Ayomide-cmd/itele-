@@ -22,7 +22,6 @@ export function Footer() {
 
         <div>
           <h3>Company</h3>
-          <Link href="/">Our Story</Link>
           <Link href="/">Contact Us</Link>
           <Link href="/">Journal</Link>
         </div>
