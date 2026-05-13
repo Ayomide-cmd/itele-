@@ -15,7 +15,7 @@ export default function Home() {
         <SectionTitle
           eyebrow="Fine Swiss Jewelry"
           title="New Arrivals"
-          href="/collections"
+          href="/shop"
         />
 
         <div className="product-grid">
