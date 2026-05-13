@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+ 
 function SearchIcon() {
   return (
     <svg
@@ -19,7 +19,7 @@ function SearchIcon() {
     </svg>
   );
 }
-
+ 
 function BagIcon() {
   return (
     <svg
@@ -40,7 +40,7 @@ function BagIcon() {
     </svg>
   );
 }
-
+ 
 export function Header() {
   return (
     <header className="site-header">
@@ -48,14 +48,14 @@ export function Header() {
         <Link href="/" className="brand" aria-label="Ìtẹ̀lé home">
           Ìtẹ̀lé
         </Link>
-
+ 
         <nav className="desktop-nav" aria-label="Primary navigation">
-          <Link href="/collections">Shop</Link>
+          <Link href="/shop">Shop</Link>
           <Link href="/collections">Collections</Link>
-          <Link href="/">Our Story</Link>
-          <Link href="/">Contact</Link>
+          <Link href="/boutique">Our Boutique</Link>
+          <Link href="/contact">Contact</Link>
         </nav>
-
+ 
         <div className="nav-actions" aria-label="Store actions">
           <Link href="/search" aria-label="Search">
             <SearchIcon />
