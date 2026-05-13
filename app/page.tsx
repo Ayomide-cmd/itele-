@@ -13,8 +13,8 @@ export default function Home() {
 
       <section className="new-releases" id="new-releases">
         <SectionTitle
-          eyebrow="The Itele Edit"
-          title="New Releases"
+          eyebrow="Fine Swiss Jewelry"
+          title="New Arrivals"
           href="/collections"
         />
 
