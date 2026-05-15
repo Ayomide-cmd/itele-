@@ -729,21 +729,47 @@ h6 {
 
 @media (max-width: 900px) {
   .nav-shell {
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: 1fr auto;
     padding: 0 1.25rem;
+    height: auto;
+    min-height: 68px;
+    row-gap: 0.75rem;
+    padding-block: 1rem 0.85rem;
   }
 
   .desktop-nav {
+    display: flex;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-self: center;
+    justify-content: center;
+    max-width: 100%;
+    gap: 1.1rem;
+    overflow-x: auto;
+    border-top: 0;
+    padding-top: 0.35rem;
+    white-space: nowrap;
+    scrollbar-width: none;
+  }
+
+  .desktop-nav::-webkit-scrollbar {
     display: none;
   }
 
+  .desktop-nav a {
+    flex: 0 0 auto;
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+  }
+
   .brand {
-    grid-column: 2;
-    justify-self: center;
+    grid-column: 1;
+    justify-self: start;
   }
 
   .nav-actions {
-    grid-column: 3;
+    grid-column: 2;
+    justify-self: end;
   }
 
   .hero-copy {

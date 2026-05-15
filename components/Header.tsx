@@ -45,9 +45,11 @@ export function Header() {
   return (
     <header className="site-header">
       <div className="nav-shell">
-        <Link href="/" className="brand" aria-label="Ìtẹ̀lé home">
-          Ìtẹ̀lé
-        </Link>
+        
+        <Link href="/" className="brand" aria-label="Go to homepage">
+  Ìtẹ̀lé
+</Link>
+
  
         <nav className="desktop-nav" aria-label="Primary navigation">
           <Link href="/shop">Shop</Link>
