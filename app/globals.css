@@ -266,12 +266,12 @@ h6 {
 }
 
 .product-meta {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
+  display: grid;
+  gap: 0.35rem;
   margin-top: 20px;
   font-size: 13px;
   font-weight: 700;
+  line-height: 1.45;
   text-transform: uppercase;
 }
 
@@ -759,10 +759,28 @@ h6 {
   }
 
   .collections-grid,
-  .product-grid,
   .footer-grid,
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.1rem;
+  }
+
+  .product-image-wrap {
+    aspect-ratio: 0.78;
+  }
+
+  .product-meta {
+    margin-top: 0.85rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.04em;
+  }
+
+  .product-card p {
+    font-size: 0.68rem;
   }
 
   .collection-card {
@@ -818,10 +836,36 @@ h6 {
 
   .section-title {
     grid-template-columns: 1fr;
+    gap: 0;
+    margin-bottom: 2rem;
   }
 
   .section-title .rule {
     display: none;
+  }
+
+  .section-title p {
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+  }
+
+  .section-title h2 {
+    font-size: 2rem;
+  }
+
+  .new-releases,
+  .collection-page {
+    padding-top: 3rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .product-grid {
+    gap: 0.9rem;
+  }
+
+  .product-meta {
+    font-size: 0.62rem;
+    line-height: 1.35;
   }
 }
 
