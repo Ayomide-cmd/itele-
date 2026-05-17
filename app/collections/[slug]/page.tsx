@@ -42,14 +42,20 @@ export default function ProductPage({
         <div className="product-detail-copy">
           <p className="product-category">{product.category}</p>
           <h1>{product.name}</h1>
-          <p className="product-detail-price">{product.price}</p>
-          <p className="product-description">{product.description}</p>
-          <AddToCart productName={product.name} />
-        </div>
+            <p className="product-detail-price">{product.price}</p>
+            <p className="product-description">{product.description}</p>
+            <AddToCart
+              product={{
+                slug: product.slug,
+                name: product.name,
+                price: product.price,
+                image: product.image,
+              }}
+            />
+          </div>
       </section>
 
       <Footer />
     </main>
   );
 }
-

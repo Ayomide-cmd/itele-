@@ -62,7 +62,7 @@ export function Header() {
           <Link href="/search" aria-label="Search">
             <SearchIcon />
           </Link>
-          <Link href="/bag" aria-label="Shopping bag">
+          <Link href="/cart" aria-label="Shopping cart">
             <BagIcon />
           </Link>
         </div>
