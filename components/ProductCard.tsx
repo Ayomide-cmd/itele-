@@ -10,6 +10,7 @@ export function ProductCard({ product }: { product: Product }) {
           src={product.image}
           alt={product.name}
           fill
+          unoptimized
           sizes="(max-width: 900px) 100vw, 33vw"
           className="product-image"
         />

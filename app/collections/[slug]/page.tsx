@@ -34,6 +34,7 @@ export default function ProductPage({
             src={product.image}
             alt={product.name}
             fill
+            unoptimized
             sizes="(max-width: 900px) 100vw, 50vw"
             priority
           />

@@ -63,9 +63,58 @@ export const products: Product[] = [
     description:
       "Sculptural imitation ivory earrings with a soft bloom silhouette for statement occasions.",
   },
+  {
+    slug: "meja-gold-plated-earrings",
+    name: "Meja Earrings - Gold Plated Earrings",
+    price: "₦40,700.00",
+    category: "Earrings",
+    image:
+      "https://i.pinimg.com/736x/23/9d/08/239d08b39fd2cba518408605982ad0b1.jpg",
+    description:
+      "Gold plated earrings with a stunning fishtail silhouette and a polished occasion-ready finish.",
+  },
+  {
+    slug: "spiral-gold-plated-earrings",
+    name: "Spiral Earrings - Gold-plated",
+    price: "₦38,700.00",
+    category: "Earrings",
+    image:
+      "https://i.pinimg.com/1200x/03/26/4c/03264c1d7900f6636d40984083234c0e.jpg",
+    description:
+      "Gold-plated spiral earrings with a sculptural curve and a soft reflective finish.",
+  },
+  {
+    slug: "3-karat-round-solitaire-moissanite",
+    name: "3 Karat Round Solitaire Moissanite - 18k White Gold Band",
+    price: "₦2,618,700.00",
+    category: "Rings",
+    image: "https://i.pinimg.com/1200x/c0/33/2c/",
+    description:
+      "A 3 karat round solitaire moissanite set on an elegant 18k white gold band.",
+  },
+  {
+    slug: "toggle-iv-necklace-with-coin-pendant",
+    name: "The Toggle IV Necklace With Coin Pendant",
+    price: "₦42,700.00",
+    category: "Necklaces",
+    image:
+      "https://i.pinimg.com/1200x/5b/18/a6/5b18a6664c7b6e9c852852cdc2e037c0.jpg",
+    description:
+      "A polished toggle necklace with a coin pendant, designed for everyday layering.",
+  },
 ];
 
 export const newReleaseProducts = products.slice(0, 3);
+
+export const necklaces = products.filter(
+  (product) => product.category === "Necklaces",
+);
+
+export const rings = products.filter((product) => product.category === "Rings");
+
+export const earrings = products.filter(
+  (product) => product.category === "Earrings",
+);
 
 export function getProductBySlug(slug: string) {
   return products.find((product) => product.slug === slug);

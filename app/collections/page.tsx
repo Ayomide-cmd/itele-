@@ -1,29 +1,73 @@
-import {Header} from '../../components/Header'
-import {Hero} from '../../components/Hero'
-import {ProductCard} from '../../components/ProductCard'
-import {SectionTitle} from '../../components/SectionTitle'
-import { newReleaseProducts } from'../../data/products';
+import { Header } from "../../components/Header";
+import { ProductCard } from "../../components/ProductCard";
 import { Footer } from "../../components/Footer";
- 
-export default function Home() {
+import { earrings, necklaces, products, rings } from "../../data/products";
+
+const collectionSections = [
+  {
+    id: "all-jewelry",
+    title: "All Jewelry",
+    products,
+  },
+  {
+    id: "necklaces",
+    title: "Necklaces",
+    products: necklaces,
+  },
+  {
+    id: "rings",
+    title: "Rings",
+    products: rings,
+  },
+  {
+    id: "earrings",
+    title: "Earrings",
+    products: earrings,
+  },
+];
+
+export default function CollectionsPage() {
   return (
     <main className="page-shell">
       <Header />
-      <Hero />
-      <section className="new-releases" id="new-releases">
-        <SectionTitle
-          eyebrow="Fine Swiss Jewelry"
-          title="New Arrivals"
-          href="/shop"
-        />
-        <div className="product-grid">
-          {newReleaseProducts.map((product) => (
-            <ProductCard product={product} key={product.slug} />
+
+      <section className="collections-catalogue">
+        <aside className="collections-sidebar" aria-label="Collections">
+          <p>Shop</p>
+          <a href="#all-jewelry">All Jewelry</a>
+          <a href="#necklaces">Necklaces</a>
+          <a href="#rings">Rings</a>
+          <a href="#earrings">Earrings</a>
+        </aside>
+
+        <div className="collections-content">
+          <header className="collections-heading-block">
+            <p>Fine Swiss Jewelry</p>
+            <h1>Collections</h1>
+          </header>
+
+          {collectionSections.map((section) => (
+            <section
+              className="collection-product-section"
+              id={section.id}
+              key={section.id}
+            >
+              <div className="collection-section-heading">
+                <h2>{section.title}</h2>
+                <span>{section.products.length} Pieces</span>
+              </div>
+
+              <div className="product-grid">
+                {section.products.map((product) => (
+                  <ProductCard product={product} key={product.slug} />
+                ))}
+              </div>
+            </section>
           ))}
         </div>
       </section>
+
       <Footer />
     </main>
   );
 }
- 

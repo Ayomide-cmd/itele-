@@ -57,6 +57,7 @@ export function CartClient() {
                   src={item.image}
                   alt={item.name}
                   fill
+                  unoptimized
                   sizes="120px"
                 />
               </div>
