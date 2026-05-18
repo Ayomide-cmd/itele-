@@ -33,7 +33,7 @@ export default function CollectionsPage() {
 
       <section className="collections-catalogue">
         <aside className="collections-sidebar" aria-label="Collections">
-          <p>Shop</p>
+          
           <a href="#all-jewelry">All Jewelry</a>
           <a href="#necklaces">Necklaces</a>
           <a href="#rings">Rings</a>
@@ -42,7 +42,7 @@ export default function CollectionsPage() {
 
         <div className="collections-content">
           <header className="collections-heading-block">
-            <p>Fine Swiss Jewelry</p>
+            
             <h1>Collections</h1>
           </header>
 
