@@ -88,7 +88,7 @@ export const products: Product[] = [
     name: "3 Karat Round Solitaire Moissanite - 18k White Gold Band",
     price: "₦2,618,700.00",
     category: "Rings",
-    image: "https://i.pinimg.com/1200x/c0/33/2c/",
+    image: "https://i.pinimg.com/1200x/c0/33/2c/c0332ce99e5a9ca6d27c03636bd08b3b.jpg",
     description:
       "A 3 karat round solitaire moissanite set on an elegant 18k white gold band.",
   },
